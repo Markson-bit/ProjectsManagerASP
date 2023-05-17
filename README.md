@@ -1,7 +1,7 @@
 
 # ProjectsManagerASP
   ## This is version of ProjectsManager made in ASP.<br>
-  ## App is on early stage of development.<br>
+  # App is on early stage of development.<br>
   
   🌱 **Tech stack:**
    <p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp"            width="40" height="40"/> </p>
@@ -17,7 +17,9 @@
 2. Debugging in Visual Studio will launch web browser<br>
   
 <br>
-     ![image](https://github.com/Markson-bit/ProjectsManagerASP/assets/88060437/8f7ac23b-5826-49d0-9acf-82b26041e7c9)
+![image](https://github.com/Markson-bit/ProjectsManagerASP/assets/88060437/16977740-7a6a-444b-8cef-98d51b125a47)
+
+
  
 
 
