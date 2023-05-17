@@ -1,0 +1,55 @@
+﻿@page "/tasks"
+
+<PageTitle>Tasks</PageTitle>
+
+<h1>Tasks</h1>
+
+<div>
+    <label>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" id="taskName" @bind="newTaskName" /> <br><br>
+    <label>Worker(s):&nbsp;&nbsp;</label>
+    <input type="text" id="taskWorker" @bind="newTaskWorker" /> <br><br>
+    <label>Description:</label>
+    <input type="text" id="taskDesc" @bind="newTaskDesc" /> <br><br>
+    <button @onclick="AddTask">Dodaj</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tasks:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in taskList)
+        {
+            <tr>
+                <td>@task</td>
+                <td><button @onclick="() => RemoveTask(task)">Usuń</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<string> taskList = new List<string>();
+    private string? newTaskName;
+    private string? newTaskWorker;
+    private string? newTaskDesc;
+
+    private void AddTask()
+    {
+        if (!string.IsNullOrWhiteSpace(newTaskName))
+        {
+            taskList.Add(newTaskName);
+            newTaskName = string.Empty;
+            newTaskWorker = string.Empty;
+            newTaskDesc = string.Empty;
+        }
+    }
+
+    private void RemoveTask(string task)
+    {
+        taskList.Remove(task);
+    }
+}
